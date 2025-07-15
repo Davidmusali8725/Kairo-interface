@@ -1,52 +1,53 @@
+
 body {
-  margin: 0;
-  background: #0e0e0e;
-  color: #f2f2f2;
-  font-family: 'Courier New', monospace;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100vh;
-}
-h1 {
-  margin-top: 30px;
-  color: #00ffff;
-  animation: pulse 3s infinite;
-}
-@keyframes pulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 1; }
-  100% { opacity: 0.6; }
-}
-canvas {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  margin-top: 20px;
-  border-radius: 10px;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
 }
 #console {
-  margin-top: 20px;
-  background: #111;
+  background: #1e1e1e;
+  color: #00ff99;
   padding: 10px;
-  width: 80%;
-  max-width: 600px;
-  height: 150px;
+  margin-top: 20px;
+  font-family: monospace;
+  height: 100px;
   overflow-y: auto;
   border-radius: 8px;
-  border: 1px solid #333;
-  font-size: 14px;
 }
 button {
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 10px 20px;
-  background: #00ffff;
-  color: #000;
-  font-weight: bold;
+  background: #00ff99;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #121212;
   cursor: pointer;
 }
-button:hover {
-  background: #00cccc;
+#kairosoul {
+  margin-top: 20px;
+  width: 80%;
+  max-width: 600px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #0c0c0c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  color: #00ffff;
+  font-style: italic;
+}
+.kairothought {
+  position: absolute;
+  left: 0;
+  animation: floatThought 15s linear infinite;
+}
+@keyframes floatThought {
+  from { top: 100%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  to { top: -50px; opacity: 0; }
 }
